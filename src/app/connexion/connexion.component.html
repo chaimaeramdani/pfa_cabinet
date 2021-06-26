@@ -1,0 +1,79 @@
+<pre>
+
+
+
+
+</pre>
+<div class="container">
+    <div class="row py-5 mt-4 align-items-center">
+        <!-- For Demo Purpose -->
+        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+            <img src="./assets/img_signup.jpg" alt="" class="img-fluid mb-3 d-none d-md-block">
+            
+        </div>
+
+        <!-- Registeration Form -->
+        
+        <div class="col-md-7 col-lg-6 ml-auto">
+            <form [formGroup] = "registrationForm" (ngSubmit)="onSubmit()" #f="ngForm">
+                <div class="form-row">
+
+                   
+  <!-- Already Registered -->
+  <div class="text-center w-100">
+    <h2 class="text-muted font-weight-bold text-info ml-2">Connexion</h2>
+</div>
+
+                    <!-- Email Address -->
+                    <div class="input-group col-lg-2 mb-4"></div>
+                    <div class="input-group col-lg-8 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-envelope text-muted"></i>
+                            </span>
+                        </div>
+                       
+                        <input id="email" formControlName="Email" type="email" 
+                        [class.is-invalid]="Email!.invalid  && Email!.touched" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md" >
+                    </div>
+
+                    <div class="input-group col-lg-2 mb-4"></div>
+
+                    
+                    <!-- Password -->
+                    <div class="input-group col-lg-2 mb-4"></div>
+
+                    <div class="input-group col-lg-8 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-lock text-muted"></i>
+                            </span>
+                        </div>
+                        <input id="password"  formControlName="Pass" type="password" name="password" placeholder="Password"   [class.is-invalid]="Pass?.invalid && Pass?.touched" class="form-control bg-white border-left-0 border-md">
+                    </div>
+                    <div class="input-group col-lg-2 mb-4"></div>
+
+                   
+                    <!-- Submit Button -->
+                    <div class="input-group col-lg-2 mb-4"></div>
+                    <div class="form-group col-lg-8 mx-auto mb-4" >
+                    <button class="btn btn-info btn-block py-2 font-weight-bold" type="submit" >Connexion </button>
+                </div>
+
+                    <div class="input-group col-lg-2 mb-4"></div>
+
+
+                    
+
+                 
+                    <!-- Already Registered -->
+                    <div class="text-center w-100">
+                        <p class="text-muted font-weight-bold"> <a routerLink="/inscription" class="text-info ml-2">Sign up</a></p>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

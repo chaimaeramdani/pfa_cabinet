@@ -1,0 +1,126 @@
+  <pre>
+
+
+
+
+  </pre>
+  <div id="service" class="services wow fadeIn">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                  <div class="inner-services">
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="./assets/home/images/service-icon1.png" alt="#" /></span>
+                           <h4>INSTALLATIONS PREMIUM</h4>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="./assets/home/images/service-icon2.png" alt="#" /></span>
+                           <h4>GRAND LABORATOIRE</h4>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="./assets/home/images/service-icon3.png" alt="#" /></span>
+                           <h4>SPÉCIALISTE DÉTAILLÉ</h4>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="./assets/home/images/service-icon4.png" alt="#" /></span>
+                           <h4>CENTRE DE GARDE ENFANTS</h4>
+                        </div>
+                     </div>
+                  
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="./assets/home/images/service-icon6.png" alt="#" /></span>
+                           <h4>SPÉCIALISTE DÉTAILLÉ</h4>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="./assets/home/images/service-icon5.png" alt="#" /></span>
+                           <h4>INFRASTRUCTURE FINE</h4>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                   <br>
+                  <div class="appointment-form">
+                   
+                    <h3> RENDEZ-VOUS</h3>
+                     <div class="form">
+                        <form  [formGroup] = "registrationForm"  (ngSubmit)="onSubmit()"  #f="ngForm">
+                           <fieldset>
+                                                   <!-- first Name -->
+
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                      
+                                        <input formControlName="Fname" id="firstName" type="text" [class.is-invalid]="Fname!.invalid  && Fname!.touched"  name="firstname" placeholder="First Name" class="form-control bg-white border-left-1 border-md">
+
+                                    </div>
+                                 </div>
+                              </div>
+                                                  <!-- Last Name -->
+
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="row">
+                                   <div class="form-group">
+                                     
+                                    <input formControlName="Lname" id="lastName" type="text"  [class.is-invalid]="Lname!.invalid && Lname!.touched"
+                                    name="lastname" pattern="[a-zA-Z ]*" placeholder="Last Name" class="form-control bg-white border-left-1 border-md">
+                                   </div>
+                                </div>
+                             </div>
+                                                 <!-- email -->
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="row">
+                                   <div class="form-group">
+                                     
+                                    <input formControlName="Email" id="email" type="email"   
+                                    [class.is-invalid]="Email!.invalid  && Email!.touched"  name="email" placeholder=" Email Address" class="form-control bg-white border-left-1 border-md" >
+                                   </div>
+                                </div>
+                             </div>
+                             <!-- date-->
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="row">
+                                   <div class="form-group">
+                                     
+                                    <input formControlName="Date" type="date" id="party" name="party" min="2021-04-01">
+
+                                   </div>
+                                </div>
+                            </div>
+
+                            
+                              
+                             
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <div class="center"><button [disabled]="f.invalid" type="submit">Submit</button></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </fieldset>
+                        </form>
+                        <p>Form value {{ registrationForm.value | json }} </p>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end section -->
+
+      

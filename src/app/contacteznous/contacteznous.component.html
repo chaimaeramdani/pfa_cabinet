@@ -1,0 +1,68 @@
+<pre>
+
+
+
+</pre>
+
+<div class="container">
+
+   <div class="col-6 col-md-2"></div>
+   <div class="col-6 col-md-8">
+         <br>
+        <div class="appointment-form">
+         
+          <h3 class="center">CONTACTEZ-NOUS</h3>
+   <div class="form">
+    <form  [formGroup] = "registrationForm"    #f="ngForm">
+       <fieldset>
+                               <!-- first Name -->
+
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+             <div class="row">
+                <div class="form-group">
+                  
+                    <input formControlName="Fname" id="firstName" type="text" [class.is-invalid]="Fname!.invalid  && Fname!.touched"  name="firstname" placeholder="First Name" class="form-control bg-white border-left-1 border-md">
+
+                </div>
+             </div>
+          </div>
+          
+                             <!-- email -->
+
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+               <div class="form-group">
+                 
+                <input formControlName="Email" id="email" type="email"   
+                [class.is-invalid]="Email!.invalid  && Email!.touched"  name="email" placeholder=" Email Address" class="form-control bg-white border-left-1 border-md" >
+               </div>
+            </div>
+         </div>
+         <!-- message-->
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+               <div class="form-group">
+                 
+                  <textarea formControlName="Message" name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+
+               </div>
+            </div>
+        </div>
+
+        
+          
+         
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+             <div class="row">
+                <div class="form-group">
+                   <div class="center"><button [disabled]="f.invalid" type="submit">Submit</button></div>
+                </div>
+             </div>
+          </div>
+       </fieldset>
+    </form>
+</div>
+        </div>
+   </div>
+<div class="col-6 col-md-2"></div>
+</div>
