@@ -1,4 +1,4 @@
-import { client } from './../client';
+import { client } from '../Model/client';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 

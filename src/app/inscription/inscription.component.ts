@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { clientService } from '../Service/Client.service';
 @Component({
   selector: 'app-inscription',
   templateUrl: './inscription.component.html',
@@ -26,7 +26,7 @@ get Phone(){
 get Pass(){
   return this.registrationForm.get('Pass');
 } 
-constructor(private fb: FormBuilder){}
+constructor(private fb: FormBuilder , private client: clientService ){}
 
 ngOnInit() {
   return this.registrationForm = this.fb.group(
@@ -37,11 +37,20 @@ ngOnInit() {
       Email : new FormControl('',[Validators.required,Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$')]),
       Phone : new FormControl('',[Validators.required,Validators.pattern('[0-9]{10}')]),
       Pass :  new FormControl('',[Validators.required,Validators.pattern('[0-9a-zA-Z]{8,12}')]),
+      cin : "null",
+      ville:"Rabat",
+      genre:"X",
+      couvSociale:"KNOPS",
+      profession:"ponstar",
+      age:"23",
+      image:"null",
+      fichiers:[]
     }
   )
 }
 
 onSubmit(){
-  console.log(this.registrationForm.value);
+  console.log(JSON.stringify(this.registrationForm.value) );
+  this.client.AddClient(this.registrationForm);
 }
 }

@@ -1,4 +1,4 @@
-import { client } from './client';
+import { client } from './Model/client';
 import { Component } from '@angular/core';
 
 @Component({
