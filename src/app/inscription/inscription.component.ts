@@ -26,7 +26,13 @@ get Phone(){
 get Pass(){
   return this.registrationForm.get('Pass');
 } 
-constructor(private fb: FormBuilder , private client: clientService ){}
+constructor(private fb: FormBuilder , private client: clientService ){
+ // get all client
+  this.client.getClient().subscribe(data =>{
+    console.log(data);
+  });
+
+}
 
 ngOnInit() {
   return this.registrationForm = this.fb.group(
@@ -50,7 +56,16 @@ ngOnInit() {
 }
 
 onSubmit(){
-  console.log(JSON.stringify(this.registrationForm.value) );
-  this.client.AddClient(this.registrationForm);
+ 
+//   var json =  {
+//     "name": "name",
+//     "id": "id",
+//     "category":"category",
+//     "price":"price"
+// };
+// console.log(json);
+
+
+  this.client.AddClient(this.registrationForm.value);
 }
 }
